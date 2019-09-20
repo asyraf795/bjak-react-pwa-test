@@ -31,3 +31,22 @@
     transform: rotate(360deg);
   }
 }
+
+html {
+  background: #202020;
+}
+
+hr.dashingred {
+  border: 2px solid #ab2222;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ab2222;
+}
