@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Board.css';
 import Poster from "./Poster";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -16,7 +16,7 @@ const Board = props => {
         items: 6
     },
     1440: {
-      items: 8
+      items: 7
     }
 }
 
@@ -25,7 +25,7 @@ const Board = props => {
   ));
 
   return (
-    <div className="container">
+    <div>
       <h2>{props.name}</h2>
       <AliceCarousel
         responsive={responsive}

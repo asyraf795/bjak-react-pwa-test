@@ -12,9 +12,6 @@ const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.innerHeight);
-      console.log(document.documentElement.scrollTop);
-      console.log(document.documentElement.offsetHeight);
       if (
         window.innerHeight + document.documentElement.scrollTop !==
         document.documentElement.offsetHeight
@@ -49,9 +46,9 @@ const App = () => {
             if (data.length > 0) {
               setLoadMore(false);
               setShows([...shows, ...data]);
-            } else if (page < 50) {
+            } else if (page < 25) {
               setPage(page => page + 1);
-            } else if (page >= 50) {
+            } else if (page >= 25) {
               setLoadMore(false);
             }
           });
@@ -63,7 +60,9 @@ const App = () => {
   const boardComponents = shows.map(board => (
     <Board name={board.row_name} data={board.data} key={board.row_id} />
   ));
-  return <div>{boardComponents}</div>;
+  return (
+    <div>{boardComponents}</div>
+  );
 };
 
 export default App;

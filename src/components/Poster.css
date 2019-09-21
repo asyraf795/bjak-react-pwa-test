@@ -1,14 +1,3 @@
-img {
-    max-width: 100% !important;
-    height: auto !important;
-    width: auto\9 !important; 
-}
-
-.imgMax {
-    max-width:300px;
-    display: inline-block
-}
-
 .fontSize {
     font-size:1.5vw;
     text-align:center;

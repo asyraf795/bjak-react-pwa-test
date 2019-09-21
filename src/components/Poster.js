@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import "./Poster.css"
 
 const Poster = props => {
@@ -7,17 +8,19 @@ const Poster = props => {
     return result;
   };
 
-  const href = "https://localhost:3000/movie?id=" + props.id;
+  const href = "/movie/" + props.id;
+
   const handleOnDragStart = e => e.preventDefault()
 
   return (
-    <a href={href} onDragStart={handleOnDragStart}>
-      <div className="imgMax">
-        <img src={filterImage()[0].url} alt={props.title} />
+    <div className="d-flex justify-content-center" onDragStart={handleOnDragStart}>
+      <Link to={href} className="btn btn-link text-light">
+        <img className="img-fluid" src={filterImage()[0].url} alt={props.title} />
         <h3 className="fontSize">{props.title}</h3>
-      </div>
-    </a>
+      </Link>    
+    </div>
   );
+  
 };
 
 export default Poster;
