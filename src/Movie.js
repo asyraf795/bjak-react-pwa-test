@@ -96,10 +96,10 @@ const Movie = props => {
                     <div className="card text-light bg-secondary">
                         <div className="card-body">
                             <h5 className="card-title">Trailers</h5>
-                            {isBrowser && doneLoading && state.trailers !== null && state.trailers.webClient.map(url => <div className="d-flex justify-content-center"><ReactHLS url={url} /></div> )}
-                            {isIOS && doneLoading && state.trailers !== null && state.trailers.iosmobile.map(url => <div className="d-flex justify-content-center"><ReactHLS url={url} /> </div> )}
-                            {isAndroid && doneLoading && state.trailers !== null && state.trailers.androidmobile.map(url =><div className="d-flex justify-content-center"> <ReactHLS url={url} /></div>  )}
-                            {isConsole && doneLoading && state.trailers !== null && state.trailers.androidmediaconsole.map(url => <div className="d-flex justify-content-center"><ReactHLS url={url} /></div>  )}
+                            {doneLoading && isBrowser && state.trailers !== null && state.trailers.webClient.map(url => <div className="d-flex justify-content-center"><ReactHLS url={url} /></div> )}
+                            {doneLoading && isIOS && state.trailers !== null && state.trailers.iosmobile.map(url => <div className="d-flex justify-content-center"><ReactHLS url={url} /> </div> )}
+                            {doneLoading && isAndroid && state.trailers !== null && state.trailers.androidmobile.map(url =><div className="d-flex justify-content-center"> <ReactHLS url={url} /></div>  )}
+                            {doneLoading && isConsole && state.trailers !== null && state.trailers.androidmediaconsole.map(url => <div className="d-flex justify-content-center"><ReactHLS url={url} /></div>  )}
                         </div>
                     </div>
                 </div>
