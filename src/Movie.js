@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
-import ReactHLS from 'react-hls-player';
+// import ReactHLS from 'react-hls-player';
 
-import { isBrowser, isConsole, isAndroid, isIOS } from "react-device-detect";
+// import { isBrowser, isConsole, isAndroid, isIOS } from "react-device-detect";
 
 const Movie = props => {
     const [state, setState] = useState({});
@@ -93,7 +93,7 @@ const Movie = props => {
                             {doneLoading && state.tags !== null && state.tags.map(tag => <h5 className="d-inline card-text"><span className="badge badge-pill badge-warning">{"#" + tag.tag}</span><span>{' '}</span></h5> )}
                         </div>
                     </div>
-                    <div className="card text-light bg-secondary">
+                    {/* <div className="card text-light bg-secondary">
                         <div className="card-body">
                             <h5 className="card-title">Trailers</h5>
                             {doneLoading && isBrowser && state.trailers !== null && state.trailers.webClient.map(url => <div className="d-flex justify-content-center"><ReactHLS url={url} /></div> )}
@@ -101,7 +101,7 @@ const Movie = props => {
                             {doneLoading && isAndroid && state.trailers !== null && state.trailers.androidmobile.map(url =><div className="d-flex justify-content-center"> <ReactHLS url={url} /></div>  )}
                             {doneLoading && isConsole && state.trailers !== null && state.trailers.androidmediaconsole.map(url => <div className="d-flex justify-content-center"><ReactHLS url={url} /></div>  )}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>      
         </div> 
