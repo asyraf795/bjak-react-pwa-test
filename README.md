@@ -66,3 +66,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### How to run locally (Quickstart)
+- Clone master to local
+- open cmd and change directory to the cloned master folder
+- run "serve -s build"
