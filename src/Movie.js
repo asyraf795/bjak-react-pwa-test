@@ -53,7 +53,7 @@ const Movie = props => {
             {doneLoading && <AliceCarousel>
                 {state.images && state.images.map(image => <div className="d-flex justify-content-center" onDragStart={handleOnDragStart}><img className="img-fluid" key={image.id} src={image.url} alt={image.type}/></div>)}
             </AliceCarousel>}
-            <div className="d-flex justify-content-center">
+            <div className="">
                 <div>
                     <div>
                         {state.downloadable && <button type="button" className="btn btn-success  btn-block">DOWNLOAD</button>}
