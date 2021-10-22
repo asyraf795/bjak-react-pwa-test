@@ -54,6 +54,7 @@ const App = () => {
           });
       }
     };
+    console.log("test")
     getData(loadMore);
   }, [loadMore, page, perPage, shows, typeFilter]);
 
