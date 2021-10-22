@@ -42,7 +42,7 @@ const App = () => {
           })
           .then(res => {
             const data = res.data.filter(show => show.type === typeFilter);
-
+            console.log("test")
             if (data.length > 0) {
               setLoadMore(false);
               setShows([...shows, ...data]);
